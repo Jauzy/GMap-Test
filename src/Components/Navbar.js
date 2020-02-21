@@ -8,7 +8,7 @@ const Navbar = (props) => {
 
     const onLogout = () => {
         const cookiesData = cookies.get('SESSION')
-        axios.put('http://localhost:4000/logout', { email: cookiesData.email, password: cookiesData.password })
+        axios.put('https://user-tracking-268910.appspot.com/logout', { email: cookiesData.email, password: cookiesData.password })
             .then(response => console.log(response))
             .catch(err => console.log(err))
         cookies.remove('SESSION')

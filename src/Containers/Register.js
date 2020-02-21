@@ -10,7 +10,7 @@ const Register = (props) => {
         setState({ ...state, [event.target.id]: event.target.value })
     }
     const onClick = () => {
-        axios.post("http://localhost:4000/register", {name : state.name, email : state.email, password : state.password})
+        axios.post("https://user-tracking-268910.appspot.com/register", {name : state.name, email : state.email, password : state.password})
         .then(response => {
             console.log(response)
             props.history.push('/login')

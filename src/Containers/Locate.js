@@ -70,9 +70,9 @@ const Locate = (props) => {
 
     useEffect(() => {
         if (state.cookies) {
-            Axios.post('http://localhost:4000/users/track', { email: state.cookies.email, password: state.cookies.password, latitude: state.latitude, longitude: state.longitude })
+            Axios.post('https://user-tracking-268910.appspot.com/users/track', { email: state.cookies.email, password: state.cookies.password, latitude: state.latitude, longitude: state.longitude })
                 .catch(err => console.log(err))
-            Axios.get('http://localhost:4000/users/location')
+            Axios.get('https://user-tracking-268910.appspot.com/users/location')
                 .then(response => {
                     setState({ ...state, usersLoc: response.data.data })
                 })
