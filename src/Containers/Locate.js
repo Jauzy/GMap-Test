@@ -38,7 +38,7 @@ const MapWithAMarkerWithLabel = compose(
     withGoogleMap
 )(props =>
     <GoogleMap
-        defaultZoom={20} defaultOptions={{ draggable: false, scrollWheel: false, gestureHandling: 'greedy' }}
+        defaultZoom={20} defaultOptions={{}}// draggable: false, scrollWheel: false, gestureHandling: 'greedy' 
         defaultCenter={{ lat: props.latitude, lng: props.longitude }}
     >
         {props.usersLoc ? props.usersLoc.map((user, index) => (
